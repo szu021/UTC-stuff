@@ -1,3 +1,5 @@
-<?php
-echo " leo";
-?>
+    <?php
+
+    phpinfo();
+
+    ?>
