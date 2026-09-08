@@ -45,3 +45,8 @@ a:link, a:visited {
 a:hover, a:active {
     background-color: red;
 }
+
+image {
+    width: 300px;
+    height: 300px;
+}
