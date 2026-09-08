@@ -2,7 +2,10 @@ body {
     background: #F5F5DC
 ;
     font-family: "comic sans MS";
-    text-align: center
+    text-align: center;
+
+
+
 ;
 }
 head {
@@ -10,13 +13,35 @@ head {
 
 
 
+
 }
 
- h1 {color: blue;}
+ h1 {
+     color: blue;
+     background-color: white;
+ }
  p {color: blue;}
  #header {
 
     color: aqua;
  }
 
+a:hover {
+    text-decoration: underline;
 
+
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: black ;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid blue;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
