@@ -21,3 +21,9 @@ body {
 #p1 {
     color:green;
 }
+
+form {
+    text-align: center;
+    font-size: 123px;
+    font-family: "Source Code Pro";
+}
