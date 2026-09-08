@@ -11,7 +11,7 @@
 </head>
 
 <body >
-<h1> green page</h1>
+<h1> green</h1>
 <p>choose an album</p>
 
 <br><!--drop down menu n that-->
@@ -20,10 +20,26 @@
     <option value="bright green fields">  bright green fields   </option>
     <option value="Happiness in magazines">  Happiness in magazines  </option>
 </select>
-<br>
+
+<div class="container">
+    <label for="image-select">choose an album:</label>
+    <select id="image-select">
+        <option value="">-- Select an image --</option>
+        <option value="mlir.jpg">Modern life is rubbish</option>
+        <option value="bgfields.jpg">bright green fields</option>
+        <option value="HIM.jpg">Happiness in magazines</option>
+    </select>
+
+    <div>
+        <img id="image-preview" src="mlir.jpg" alt="Selected preview">
+        <img id="image-preview2" src="bgfields.jpg" alt="Selected preview">
+        <img id="image-preview3" src="HIM.jpg`" alt="Selected preview">
+
+    </div>
+</div>
 
 
 
+</body>
+</html>
 
-<hr>
-<br>
