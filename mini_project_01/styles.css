@@ -50,3 +50,15 @@ image {
     width: 300px;
     height: 300px;
 }
+
+
+table {
+
+    border: black 10px;
+
+}
+
+td {
+    border: black solid 1px;
+}
+
