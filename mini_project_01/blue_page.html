@@ -4,21 +4,38 @@
 
 <head>
     <title>
-        blue page
+        green page
     </title>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body >
-<h1> blue page</h1>
-<p>choose an album</p>
-<br><!--drop down menu n that-->
-<select name="blue_a_choice" id="usrselect">
-    <option value="Modern life is rubbish">  Modern life is rubbish  </option>
-    <option value="bright green fields">  bright green fields   </option>
-    <option value="Happiness in magazines">  Happiness in magazines  </option>
-</select>
+<h1> green</h1>
 
+
+
+
+<div class="container">
+    <label for="image-select">choose an album:</label>
+    <select id="image-select">
+        <option value="">-- Select an image --</option>
+        <option value="hp.jpg">human performance </option>
+        <option value="tga.jpg">the great escape</option>
+        <option value="mlir.jpg">modern life is rubbish</option>
+    </select>
+
+    <div>
+        <img id="image-preview" src="blue/hp.jpg" alt="Selected preview">
+        <img id="image-preview2" src="blue/tga.jpg" alt="Selected preview">
+        <img id="image-preview3" src="blue/mlir.jpg" alt="Selected preview">
+
+    </div>
+</div>
 <hr>
-<br>
+<p></p>
+<p></p>
+<p></p>
+
+
+<a href="home_page.html">home page</a>
