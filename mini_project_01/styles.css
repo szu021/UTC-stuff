@@ -32,16 +32,6 @@ a:hover {
 
 }
 
-a:link, a:visited {
-    background-color: #f44336;
-    color: black ;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border: 2px solid blue;
-}
-
 a:hover, a:active {
     background-color: red;
 }
@@ -62,3 +52,25 @@ td {
     border: black solid 1px;
 }
 
+#titlebar {
+    solid-color: black;
+    margin: 2px;
+}
+
+#navi {
+    border: 1px solid blue;
+}
+
+#navi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #748564;
+}
+
+#navi li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
