@@ -1,0 +1,36 @@
+h1 {
+    color: blue;
+    background-color: #ffb515;
+    text-align:center ;
+    font-family: "comic sans MS", serif;
+    border: solid black 5px;
+}
+
+#navi {
+    border: 5px solid black;
+}
+
+#navi ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #94e08b;
+    font-size: 30px;
+}
+
+#navi li {
+    padding-left: 100px;
+    padding-right: 150px;
+
+}
+
+body {
+    background-color: bisque;
+}
+
+p {
+    font-family: "C059", "Noto Sans Tagalog", monospace;
+    font-size: 25px;
+}
