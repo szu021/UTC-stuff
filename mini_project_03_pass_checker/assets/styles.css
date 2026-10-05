@@ -1,7 +1,75 @@
-body  {
-
+body {
+    background-color: #002B4D;
 }
 
 h1  {
-    align-content: center;
+    text-align: center;
+    font-size: 45px;
+    background: #c8d1d9;
+    border-radius: 50px;
+    border:solid black 1px;
+    width:100%;
+    justify-self: center;
+    height: auto;
+    margin-top: 20px;
+
 }
+
+.navi {
+    text-align: center;
+    font-size: 30px;
+    background: #c8d1d9;
+    border-radius: 50px;
+    border:solid black 1px;
+    width:100%;
+    justify-self: center;
+    height: auto;
+
+
+
+}
+
+.linktext:link {
+    text-decoration: black;
+    color: black;
+}
+
+.linktext:hover {
+    color: blue;
+}
+
+.linktext:visited {
+    color: black;
+}
+
+.pass_info{
+    text-align: left;
+    color: white;
+    height: 50px;
+    font-size: 50px;
+    margin-top: 100px ;
+    font-weight: bold;
+
+
+}
+
+input {
+    font-size: 35px;
+    border-radius:50px;
+    border: solid black 5px;
+    margin-left: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 35px;
+    color: white;
+}
+
+p  {
+    font-size: 25px;
+    color: white;
+}
+
+
+    
