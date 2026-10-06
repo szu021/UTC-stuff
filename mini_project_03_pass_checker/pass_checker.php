@@ -46,13 +46,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <div class="user_message">
 <?php
 $pswd = $_POST["password"];
-$array = ["No Uppercase used", "Uppercase used"];
+$arrayU = ["No Uppercase used", "Uppercase used"];
+$arrayl = ["No Lowercase used", "Lowercase used"];
+$arrayn = ["No number used", "Number used"];
+$arrays = ["special charcacter used", "special character not used"];
+$arraypwrd = ["cant have password in password", "good name convention"];
 echo user_message();
 echo nl2br("\n");
 echo length_output();
 echo nl2br("\n");
-echo $array[hasUpperCase($pswd)];
-
+echo $arrayU[hasUpperCase($pswd)];
+echo nl2br("\n");
+echo $arrayl[hasLowerCase($pswd)];
+echo nl2br("\n");
+echo $arrayn[hasNumber($pswd)];
+echo nl2br("\n");
+echo $arrays[hasUpperCase($pswd)];
+echo nl2br("\n");
+echo $arraypwrd[wordChecker($pswd)];
 ?>
 </div>
 </body>

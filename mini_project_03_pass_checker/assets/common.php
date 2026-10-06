@@ -46,3 +46,42 @@ function hasUpperCase($mystring) {
         return false;
     }
 }
+
+function hasLowerCase($mystring) {
+    if (preg_match('/[a-z]/', $mystring)) {
+        return true;
+
+    } else {
+        return false;
+    }
+}
+
+function hasNumber($mystring) {
+    if (preg_match('/[0-9]/', $mystring)) {
+        return true;
+
+    }else {
+        return false;
+    }
+}
+
+function hasSpecialCharacter($mystring) {
+    if (preg_match('/[^a-zA-Z0-9]/', $mystring)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function wordChecker($pswd) {
+    $answer = false;
+    if (!(str_contains($pswd, "password"))) {
+        $answer = true;
+    }
+    return $answer;
+
+    }
+
+
+
+
