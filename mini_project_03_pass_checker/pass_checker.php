@@ -51,6 +51,9 @@ $arrayl = ["No Lowercase used", "Lowercase used"];
 $arrayn = ["No number used", "Number used"];
 $arrays = ["special charcacter used", "special character not used"];
 $arraypwrd = ["cant have password in password", "good name convention"];
+$arraysc = [" first char doesnt use special", " first uses special, Well Done"];
+$arraylc = [" last char doesnt use special", " last uses special, Well Done"];
+$arraynf = [" first number doesnt use special", " last uses number, Well Done"];
 echo user_message();
 echo nl2br("\n");
 echo length_output();
@@ -64,6 +67,12 @@ echo nl2br("\n");
 echo $arrays[hasUpperCase($pswd)];
 echo nl2br("\n");
 echo $arraypwrd[wordChecker($pswd)];
+echo nl2br("\n");
+echo $arraysc[firstSpecial($pswd)];
+echo nl2br("\n");
+echo $arraylc[lastSpecial($pswd)];
+echo nl2br("\n");
+echo $arraynf[firstNumber($pswd)];
 ?>
 </div>
 </body>

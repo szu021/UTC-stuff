@@ -74,6 +74,7 @@ function hasSpecialCharacter($mystring) {
 }
 
 function wordChecker($pswd) {
+    $pswd = strtolower($pswd);
     $answer = false;
     if (!(str_contains($pswd, "password"))) {
         $answer = true;
@@ -82,6 +83,15 @@ function wordChecker($pswd) {
 
     }
 
+function firstSpecial($pswd) {
+    return preg_match('/[^a-zA-Z0-9]/', substr($pswd, 0 , 1) );
+}
+
+function lastSpecial($pswd) {
+    return preg_match('/[^a-zA-Z0-9]/', substr($pswd, -1 , 1) );
+}
 
 
-
+function firstnumber($pswd) {
+    return preg_match('/[0-9]/', substr($pswd, 0 , 1) );
+}
