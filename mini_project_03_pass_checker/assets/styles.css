@@ -21,8 +21,9 @@ h1  {
     background: #c8d1d9;
     border-radius: 50px;
     border:solid black 1px;
-    width:100%;
+    width:30%;
     justify-self: center;
+    align-content: center;
     height: auto;
 
 
@@ -72,4 +73,22 @@ p  {
 }
 
 
+.user_message {
+    font-size: 25px;
+    color: white;
+}
+
+
+.text_box {
+    text-align: center;
+    background: #18212b;
+    border-radius: 50px;
+    border:solid black 1px;
+    width:60%;
+    justify-self: center;
+    height: auto;
+    margin-top: 200px;
+
+}
     
+

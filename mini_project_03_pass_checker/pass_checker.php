@@ -5,7 +5,12 @@ require_once("assets/common.php");
 //     creates sever and sens through
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 //    creates session variable linked to form
-    $_SESSION["message"] = $_POST["message"];
+    //$_SESSION["message"] = $_POST["message"];
+    if (string_length($_POST["password"])) {
+        $_SESSION["message"] = "password is too long";
+    } else {
+        $_SESSION["message"] = "pass too short";
+    }
 }
 
 ?>
@@ -13,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html>
 <head>
     <title>password checker</title>
-    <link rel="stylesheet" href="assets/styles.css">
+ <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 
@@ -23,19 +28,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </div>
 
 
+<div class="pass_info">
 <form method="post" action="">
-    <div class="pass_info">
-        <label for="enter">enter Password:</label>
-        <input type="text" name="message"  placeholder="message" required>
-        <br>
-        <input type='submit' name='submit' id="Enter"  />
-    </div>
-</form>
 
+        <label for="enter">enter Password:</label>
+        <input type="text" name="password"  placeholder="password" required>
+        <br><br>
+
+        <input type='submit' name='submit'/>
+
+</form>
+</div>
+<br><br>
+<br><br>
 <br><br>
 <h2>Feedback:</h2>
+<div class="user_message">
 <?php
 echo user_message()
 ?>
+</div>
 </body>
 </html>

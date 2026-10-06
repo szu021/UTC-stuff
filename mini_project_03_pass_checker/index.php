@@ -6,19 +6,24 @@
     <link rel="stylesheet" href="assets/styles.css">
 
 </head>
-<h1>HomePage</h1>
+<body>
+
+<h1>Home Page</h1>
 
 <div class="navi">
     <a class ="linktext" href="pass_checker.php">password checker</a>
 </div>
 
-<h2> Why do you need a strong password? </h2>
-<p>A strong password serves as your primary line of defence against cybercriminals.
-    It acts as a digital gatekeeper to block unauthorised access and shield your identity, personal data,
-    and financial assets from fraud. Without strong passwords, your online accounts are vulnerable
-    to automated hacking tools that can guess weak credentials in a matter of seconds.</p>
+<div class="text_box">
+<h2>importance of password security</h2>
+<p>Strong passwords are your digital gatekeepers
+    and act as the first line of defense against unauthorized access to your personal accounts, finances, and sensitive data</p>
+<h2>advice on strong passwords</h2>
+<p>The best strategy for making a strong password is to prioritize length and unpredictability over random complexity.
+    Modern cybersecurity standards from agencies like the NIST and the UK NCSC emphasize that long,
+    memorable passphrases are significantly harder for computers to crack than short, confusing strings of gibberish.</p>
+</div>
 
-<h2>Advice</h2>
-<p>Creating strong, unhackable passwords does not mean you have to memorize random strings of characters like
-    p@$$w0rd123. Modern security standards focus on making passwords long, unique, and easy for humans to
-    remember but impossible for computers to guess.</p>
+
+</body>
+</html>
