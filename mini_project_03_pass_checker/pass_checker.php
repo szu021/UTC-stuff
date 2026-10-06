@@ -45,7 +45,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <h2>Feedback:</h2>
 <div class="user_message">
 <?php
-echo user_message()
+echo user_message();
+echo nl2br("\n");
+echo length_output();
+
 ?>
 </div>
 </body>

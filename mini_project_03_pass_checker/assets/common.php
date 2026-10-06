@@ -26,3 +26,13 @@ function string_length($mystring){
     }
     return $answer;
 }
+
+function length_output() {
+    $msg = "";
+
+    $mystring = $_POST["password"];
+    $length = strlen($mystring);
+    $msg = 'Your password is ' . $length . ' characters long';
+
+    return $msg;
+}
