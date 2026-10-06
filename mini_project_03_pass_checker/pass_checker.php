@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 //    creates session variable linked to form
     //$_SESSION["message"] = $_POST["message"];
     if (string_length($_POST["password"])) {
-        $_SESSION["message"] = "password is too long";
+        $_SESSION["message"] = "password is a fine length";
     } else {
         $_SESSION["message"] = "pass too short";
     }
@@ -45,9 +45,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <h2>Feedback:</h2>
 <div class="user_message">
 <?php
+$pswd = $_POST["password"];
+$array = ["No Uppercase used", "Uppercase used"];
 echo user_message();
 echo nl2br("\n");
 echo length_output();
+echo nl2br("\n");
+echo $array[hasUpperCase($pswd)];
 
 ?>
 </div>

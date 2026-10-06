@@ -36,3 +36,13 @@ function length_output() {
 
     return $msg;
 }
+
+
+function hasUpperCase($mystring) {
+    if (preg_match('/[A-Z]/', $mystring)) {
+        return true;
+
+    } else {
+        return false;
+    }
+}
