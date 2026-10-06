@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <div class="pass_info">
 <form method="post" action="">
 
-        <label for="enter">enter Password:</label>
+        <label for="enter">Enter Password:</label>
         <input type="text" name="password"  placeholder="password" required>
         <br><br>
 
@@ -54,6 +54,7 @@ $arraypwrd = ["cant have password in password", "good name convention"];
 $arraysc = [" first char doesnt use special", " first uses special, Well Done"];
 $arraylc = [" last char doesnt use special", " last uses special, Well Done"];
 $arraynf = [" first number doesnt use special", " last uses number, Well Done"];
+echo '<div class="feedback_box">';
 echo user_message();
 echo nl2br("\n");
 echo length_output();
@@ -73,6 +74,7 @@ echo nl2br("\n");
 echo $arraylc[lastSpecial($pswd)];
 echo nl2br("\n");
 echo $arraynf[firstNumber($pswd)];
+echo '</div>';
 ?>
 </div>
 </body>

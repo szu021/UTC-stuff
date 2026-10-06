@@ -65,6 +65,7 @@ input {
 h2 {
     font-size: 35px;
     color: white;
+    text-align: center;
 }
 
 p  {
@@ -91,4 +92,13 @@ p  {
 
 }
     
-
+.feedback_box {
+    text-align: center;
+    background: #18212b;
+    border-radius: 50px;
+    border:solid black 1px;
+    width:60%;
+    justify-self: center;
+    height: auto;
+    margin-top: 20px;
+}
