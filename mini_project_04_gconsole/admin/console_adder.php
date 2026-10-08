@@ -1,9 +1,8 @@
 <?php
-//
-//session_start(); # server side storage session lasts like 5 mins
-//require_once "assets/common.php";  // bring in the common functions
-//require_once "assets/dbconn.php";  // bring in the dbconnection, not ideal way to execute
-//?>
+session_start(); # server side storage session lasts like 5 mins
+require_once "assets/common.php";  // bring in the common functions
+require_once "assets/dbconn.php";  // bring in the dbconnection, not ideal way to execute
+?>
 
 <html>
 <head> <!-- The head of the page, usually has the title, which is the tab's name as well as the link to the stylesheet to decorate the website. -->
