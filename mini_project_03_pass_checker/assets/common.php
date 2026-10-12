@@ -21,7 +21,7 @@ function string_length($mystring){
 
     $length = strlen($mystring);
 
-    if ($length > 8) {
+    if ($length >= 8) {
         $answer = true;
     }
     return $answer;
