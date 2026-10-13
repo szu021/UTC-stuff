@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head> <!-- The head of the page, usually has the title, which is the tab's name as well as the link to the stylesheet to decorate the website. -->
     <title>console adder</title>
-    <link rel="stylesheet" href="styles.css"
+
 
 </head>
 <body>
