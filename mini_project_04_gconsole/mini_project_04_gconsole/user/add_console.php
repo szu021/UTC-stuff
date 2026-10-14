@@ -30,7 +30,7 @@
         <form method="post">
             <label for="console">console</label>
             <input type="text" name="console" id="console" placeholder="console" required>
-            <label for="purchase">date</label>
+            <label for="purchase">date of purchase</label>
             <input type="date" name="purchase" id="purchase" placeholder="purchase" required>
             <!--    step and min for currency so negative cant be added and decimals can be -->
             <label for="price">price</label>

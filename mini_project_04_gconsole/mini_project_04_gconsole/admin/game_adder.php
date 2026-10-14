@@ -4,11 +4,9 @@ require_once '../assets/dbconn.php';   // brings in the database connection
 
 // this only runs when the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    try { // try to add the game
-        if (reg_game(dbconnect_insert())) { // connect to the database then add the game
-            header("Location: ../index.php"); // if it worked go to the index page
-            exit; // stop the rest of the page from running
-        }
+   try { // try to add the developer
+        reg_developer(dbconnect_insert()); // connect to the database then add the developer
+
     } catch (PDOException $e) { // catches database errors
         echo $e->getMessage(); // shows the error
         exit; // stops the page

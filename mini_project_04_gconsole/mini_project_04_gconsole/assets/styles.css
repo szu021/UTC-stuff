@@ -121,7 +121,8 @@ body {
 body.dash_page {
     display: block;          /* turns off the centring used on the index page */
     padding: 0;
-    background: #ffffff;     /* white page behind the card */
+    background: #ffffff; /* white page behind the card */
+
 }
 
 /* black bar across the top with the logo, the image sits straight inside the body */

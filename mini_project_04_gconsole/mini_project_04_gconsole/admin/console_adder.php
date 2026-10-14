@@ -42,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
         <label for="console_name"><strong>enter a console_name:</strong></label>
-        <input type="text" name="console_name" id="console_name" placeholder="manufacturer" required><br>
+        <input type="text" name="console_name" id="console_name" placeholder="console name" required><br>
 
         <label for="cost"><strong>cost:</strong></label>
-        <input type="text" name="cost" id="cost" placeholder="name" required><br>
+        <input type="text" name="cost" id="cost" placeholder="cost kaching" required><br>
 
         <label for="os"><strong>location:</strong></label>
         <input type="text" name="os" id="os" placeholder="location" required><br>
