@@ -1,45 +1,17 @@
 <?php
 
 
-require_once "assets/common.php";
-require_once "assets/dbconn.php";
+//session_start(); # server side storage session lasts like 5 mins
+//require_once "assets/common.php";  // bring in the common functions
+//require_once "assets/dbconn.php";  // bring in the dbconnection, not ideal way to execute
 
-$_SESSION['Title'] = "Sign In";
+session_start();
 
+require_once "../assets/dbconn.php";
+require_once "../assets/images.php";
 
-try {
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-        if (!isset($_SESSION["student_id"])) {
-            $_SESSION["usermessage"] = "You are already logged in.";
-            header("Location: students.php");
-            exit;
-        } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $usr = login(dbconnect_insert(), $_POST["email"]);
-
-            if ($usr && password_verify($_POST["password"], $usr["password"])) {
-                $_SESSION["usermessage"] = "You are now logged in.";
-                $_SESSION["student_id"] = getuserid(dbconnect_insert(), $_POST["email"]);
-                header("Location: students.php");
-                exit;
-            } elseif (!$usr) {
-                $_SESSION["usermessage"] = "invalid email or password.";
-                header("Location: signin.php");
-            } else {
-                $_SESSION["usermessage"] = "something went wrong.";
-                header("Location: signin.php");
-                exit;
-            }
-        }
-    }
-} catch (PDOException $e) {
-    $_SESSION['usermessage'] = $e->getMessage();
-    header("Location: signin.php");
-    exit;
-} catch (Exception $e) {
-    $_SESSION['usermessage'] = $e->getMessage();
-    header("Location: signin.php");
-    exit;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    regcons(dbconnect_insert());
 }
 
 
@@ -54,7 +26,14 @@ try {
 <body class="dash_page">
 <img id="image-preview" src="../assets/images/Gconsole.jpeg" alt="Selected preview">
 
-<?php echo user_message(); ?>
+<?php echo user_message();
+
+$a = makergetter(dbconnect_insert());
+foreach ($a
+
+as $m) {
+    echo '<option value="' . $m["manufacturer_id"] . '">' . $m["name"] . '</option>';
+}?>
 <div class="navi">
     <nav>
         <ul>
