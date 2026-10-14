@@ -19,7 +19,7 @@
             <li><a href="my_games.php">  My Games </a></li>
             <li><a href="add_console.php"> Add Consoles </a></li>
             <li><a href="add_game.php"> Add games </a></li>
-            <li><a href="index.html" >Logout </li>
+            <li><a href="index.html" >Logout </a> </li>
         </ul>
     </nav>
 
