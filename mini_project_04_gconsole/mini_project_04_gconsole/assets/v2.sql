@@ -10,7 +10,7 @@ CREATE TABLE `developer` (
   `developer_id` int NOT NULL,
   `name` text NOT NULL,
   `location` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -22,7 +22,7 @@ CREATE TABLE `publisher` (
   `publisher_id` int NOT NULL,
   `name` text NOT NULL,
   `location` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -35,7 +35,7 @@ CREATE TABLE `game` (
   `name` text NOT NULL,
   `developer_id` int NOT NULL,
   `publisher_id` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Indexes for dumped tables
