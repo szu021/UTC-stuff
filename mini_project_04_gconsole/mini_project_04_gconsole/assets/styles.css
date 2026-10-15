@@ -291,3 +291,61 @@ body.dash_page > img {
         width: 85%;
     }
 }
+
+
+/* ------------------------------------------------------------------
+   my consoles / my games  -  catalogue style table
+   dark header row, thin lines between rows, rows highlight on hover
+------------------------------------------------------------------- */
+
+.collection {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.collection h1 {
+    margin: 0 0 20px;
+    font-size: 40px;
+    color: #000000;
+}
+
+.table_box {
+    overflow-x: auto;            /* scrolls sideways on small screens instead of breaking the page */
+    border: 1px solid #c8d1d9;
+    border-radius: 10px;
+}
+
+.collection_table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: #ffffff;
+    color: #000000;
+}
+
+.collection_table th {
+    padding: 14px 16px;
+    background: #323030;         /* dark header to match the site menu */
+    color: #c8d1d9;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: left;
+}
+
+.collection_table td {
+    height: 60px;                /* blank rows keep their height */
+    padding: 14px 16px;
+    border-top: 1px solid #e3e7eb;
+    font-size: 16px;
+}
+
+.collection_table tbody tr:nth-child(even) {
+    background: #f6f8fa;         /* faint stripes make long lists easier to read */
+}
+
+.collection_table tbody tr:hover {
+    background: #e9eef3;
+}

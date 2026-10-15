@@ -1,21 +1,4 @@
-<?php
 
-
-//session_start(); # server side storage session lasts like 5 mins
-//require_once "assets/common.php";  // bring in the common functions
-//require_once "assets/dbconn.php";  // bring in the dbconnection, not ideal way to execute
-
-session_start();
-
-require_once "../assets/dbconn.php";
-require_once "../assets/images.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    regcons(dbconnect_insert());
-}
-
-
-?>
 
 <html>
 
@@ -26,14 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="dash_page">
 <img id="image-preview" src="../assets/images/Gconsole.jpeg" alt="Selected preview">
 
-<?php echo user_message();
 
-$a = makergetter(dbconnect_insert());
-foreach ($a
-
-as $m) {
-    echo '<option value="' . $m["manufacturer_id"] . '">' . $m["name"] . '</option>';
-}?>
 <div class="navi">
     <nav>
         <ul>
