@@ -50,7 +50,7 @@ try {
 
 <body>
 <div class="register_bar">
-    <img id="image-preview" src="../assets/images/gconsole_light.jpeg" alt="Gconsole logo">
+    <img id="image-preview" src="../assets/images/gconsole_light.png" alt="Gconsole logo">
     <h1>welcome</h1>
     <p>log in to Gconsole to continue</p>
     <?php if (isset($_SESSION["usermessage"])) { echo '<p class="message">' . e(user_message()) . '</p>'; } ?>

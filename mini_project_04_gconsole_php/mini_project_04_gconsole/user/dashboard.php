@@ -24,7 +24,7 @@ $total_spent = $stats["console_spent"] + $stats["game_spent"];
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body class="dash_page">
-<img id="image-preview" src="../assets/images/Gconsole.jpeg" alt="Gconsole logo">
+<img id="image-preview" src="../assets/images/Gconsole.png" alt="Gconsole logo">
 
 
 <div class="navi">

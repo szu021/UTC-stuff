@@ -32,24 +32,24 @@ try {
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body class="dash_page">
-<img id="image-preview" src="../assets/images/Gconsole.jpeg" alt="Gconsole logo">
+        <img id="image-preview" src="../assets/images/Gconsole.png" alt="Gconsole logo">
 
 
-<div class="navi">
-    <?php require_once "../assets/user_navi.php"; ?>
-</div>
+    <div class="navi">
+        <?php require_once "../assets/user_navi.php"; ?>
+    </div>
 
-<main class="collection">
-    <h1>My Consoles</h1>
-    <?php if (isset($_SESSION["usermessage"])) { echo '<p class="message">' . e(user_message()) . '</p>'; } ?>
+    <main class="collection">
+        <h1>My Consoles</h1>
+        <?php if (isset($_SESSION["usermessage"])) { echo '<p class="message">' . e(user_message()) . '</p>'; } ?>
 
-    <div class="table_box">
-        <table class="collection_table">
-            <thead>
-            <tr>
-                <th>Console</th>
-                <th>Purchase date</th>
-                <th>Region</th>
+        <div class="table_box">
+            <table class="collection_table">
+                <thead>
+                <tr>
+                    <th>Console</th>
+                    <th>Purchase date</th>
+                    <th>Region</th>
                 <th>Price</th>
                 <th>Games</th>
                 <th>Remove</th>

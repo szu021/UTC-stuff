@@ -43,7 +43,7 @@ try {
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body class="dash_page">
-<img id="image-preview" src="../assets/images/Gconsole.jpeg" alt="Gconsole logo">
+<img id="image-preview" src="../assets/images/Gconsole.png" alt="Gconsole logo">
 
 
 <div class="navi">
@@ -51,12 +51,12 @@ try {
 
 
     <div class="adder">
-        <h1>add console</h1>
+        <h1>Add Console</h1>
         <?php if (isset($_SESSION["usermessage"])) { echo '<p class="message">' . e(user_message()) . '</p>'; } ?>
         <form method="post">
-            <label for="console_id">console</label>
+            <label for="console_id">Console</label>
             <select name="console_id" id="console_id" required>
-                <option value="">Select a console</option>
+                <option value="">Select A Console</option>
                 <?php
                 foreach ($consoles as $c) {
                     echo '<option value="' . e($c["console_id"]) . '">' . e($c["console_name"]) . '</option>';
@@ -64,7 +64,7 @@ try {
                 ?>
             </select>
 
-            <label for="region">region</label>
+            <label for="region">Region</label>
             <select name="region" id="region" required>
                 <?php
                 foreach (region_list() as $r) {
@@ -73,10 +73,10 @@ try {
                 ?>
             </select>
 
-            <label for="purchase">date of purchase</label>
+            <label for="purchase">Date Of Purchase</label>
             <input type="date" name="purchase" id="purchase" max="<?php echo date("Y-m-d"); ?>" required>
             <!--    step and min for currency so negative cant be added and decimals can be -->
-            <label for="price">price</label>
+            <label for="price">Price</label>
             <input type="number" name="price" id="price" step="0.01" min="0" placeholder="price" required>
             <input type="submit" name="submit" id="submit" value="add">
         </form>
