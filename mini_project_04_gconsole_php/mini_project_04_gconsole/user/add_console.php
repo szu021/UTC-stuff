@@ -58,7 +58,7 @@ try {
             <select name="console_id" id="console_id" required>
                 <option value="">Select a console</option>
                 <?php
-                foreach ($consoles as $c) { // one option per console the admin has added
+                foreach ($consoles as $c) {
                     echo '<option value="' . e($c["console_id"]) . '">' . e($c["console_name"]) . '</option>';
                 }
                 ?>

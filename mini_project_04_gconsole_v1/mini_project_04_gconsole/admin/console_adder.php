@@ -1,21 +1,5 @@
 
 
-
-<?php
-//session_start(); # server side storage session lasts like 5 mins
-//require_once "assets/common.php";  // bring in the common functions
-//require_once "assets/dbconn.php";  // bring in the dbconnection, not ideal way to execute
-
-session_start();
-
-require_once "../assets/dbconn.php";
-require_once "../assets/images.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    regcons(dbconnect_insert());
-}
-?>
-
 <html>
 <head> <!-- The head of the page, usually has the title, which is the tab's name as well as the link to the stylesheet to decorate the website. -->
     <title>console adder</title>
@@ -32,12 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="manufacturer"><strong> manufacturer:</strong></label>
         <select name="manufacturer" id="manufacturer">
-            <?php
-                $a = makergetter(dbconnect_insert());
-                foreach ($a as $m) {
-                    echo '<option value="' . $m["manufacturer_id"] . '">' . $m["name"] . '</option>';
-                }
-            ?>
+
         </select><br>
 
 
