@@ -35,13 +35,13 @@ function region_list(){
 # checks a date is a real date and is not in the future
 function valid_date($date){
     $d = DateTime::createFromFormat("Y-m-d", $date);
-    if (!$d || $d->format("Y-m-d") !== $date) { // not a real date
+    if (!$d || $d->format("Y-m-d") !== $date) { // not real date
         return false;
     }
-    return $d <= new DateTime("today"); // can't buy something tomorrow
+    return $d <= new DateTime("today"); //if in future date
 }
 
-# only user
+
 function onlyuser($conn, $email){ // at registration check to make sure there none of the same
     $sql = "SELECT email FROM users WHERE email = ?"; // check if the inputted email is already in the emails
     $stmt = $conn->prepare($sql); // prepare sql
@@ -101,17 +101,9 @@ function getuserid($conn, $email){
 }
 
 
-# ---------------- drop down lists ----------------
 
-function get_consoles($conn){
-    // function to get all the consoles the admin has added for a drop down
-    $sql = "SELECT console_id, console_name FROM console ORDER BY console_name";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $conn = null;
-    return $result;
-}
+
+
 
 function get_games($conn){
     // function to get all the games the admin has added for a drop down

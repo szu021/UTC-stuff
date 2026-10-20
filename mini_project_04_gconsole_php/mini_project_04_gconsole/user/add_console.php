@@ -18,17 +18,11 @@ try {
         elseif (!in_array($_POST["region"], region_list())) {
             $_SESSION["usermessage"] = "Please pick a region from the list.";
         }
-        elseif (add_user_console(dbconnect_insert(), $_SESSION["user_id"])) {
-            $_SESSION["usermessage"] = "Console added to your collection.";
-        }
-        else {
-            $_SESSION["usermessage"] = "That console does not exist.";
-        }
+
         header("Location: add_console.php"); // redirect so refreshing doesn't add it twice
         exit;
     }
 
-    $consoles = get_consoles(dbconnect_insert()); // for the drop down
 } catch (PDOException $e) {
     error_log($e->getMessage());
     echo "Something went wrong, please try again.";
@@ -55,13 +49,10 @@ try {
         <?php if (isset($_SESSION["usermessage"])) { echo '<p class="message">' . e(user_message()) . '</p>'; } ?>
         <form method="post">
             <label for="console_id">Console</label>
-            <select name="console_id" id="console_id" required>
-                <option value="">Select A Console</option>
-                <?php
-                foreach ($consoles as $c) {
-                    echo '<option value="' . e($c["console_id"]) . '">' . e($c["console_name"]) . '</option>';
-                }
-                ?>
+            <input type="text" id="console" required  >
+            <?php
+
+            ?>
             </select>
 
             <label for="region">Region</label>
