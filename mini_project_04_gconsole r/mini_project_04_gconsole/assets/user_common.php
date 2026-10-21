@@ -32,7 +32,6 @@ function region_list(){
 }
 
 
-# ---------------- accounts ----------------
 
 function onlyuser($conn, $email){ // true if nobody has this email yet
     $sql = "SELECT email FROM users WHERE email = ?";
@@ -69,11 +68,10 @@ function login($conn, $email){
     $stmt->execute();
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $conn = null;
-    return $result; // false if no user found
+    return $result; // error handle no user
 }
 
 
-# ---------------- consoles ----------------
 
 function add_user_console($conn, $user_id){
     // the console name is typed in by the user
@@ -107,7 +105,7 @@ function get_user_consoles($conn, $user_id){
 }
 
 function remove_user_console($conn, $user_id){
-
+//    removes console from list
     $sql = "DELETE FROM user_console WHERE user_console_id = ? AND user_id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $_POST["user_console_id"]);
@@ -118,7 +116,7 @@ function remove_user_console($conn, $user_id){
 }
 
 
-# ---------------- games ----------------
+
 
 function get_games($conn){
     // all the games the admin has added, for the drop down
@@ -147,7 +145,7 @@ function add_user_game($conn, $user_id){
 }
 
 function get_user_games($conn, $user_id, $user_console_id = 0){
-    // every game the user owns, or only the games for one console
+    // every game the user owns as according to console
     $sql = "SELECT user_game.user_game_id, game.name AS game_name, user_console.console_name, user_console.region,
                    user_game.purchase_date, user_game.price, user_game.format
             FROM user_game
@@ -171,6 +169,7 @@ function get_user_games($conn, $user_id, $user_console_id = 0){
 }
 
 function remove_user_game($conn, $user_id){
+//  removes game
     $sql = "DELETE FROM user_game WHERE user_game_id = ? AND user_id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $_POST["user_game_id"]);
@@ -181,8 +180,8 @@ function remove_user_game($conn, $user_id){
 }
 
 
-# ---------------- dashboard ----------------
 
+// stats dashboard may work
 function get_stats($conn, $user_id){
     $stats = [];
 
