@@ -40,14 +40,7 @@ $my_consoles = get_user_consoles(dbconnect_insert(), $_SESSION["user_id"]); // o
         <?php } else { ?>
         <form method="post">
             <label for="game_id">game</label>
-            <select name="game_id" id="game_id" required>
-                <option value="">Select a game</option>
-                <?php
-                foreach ($games as $g) {
-                    echo '<option value="' . e($g["game_id"]) . '">' . e($g["name"]) . '</option>';
-                }
-                ?>
-            </select>
+            <input type="text" name="game_name" id="game_name" placeholder="game name" required>
 
             <label for="user_console_id">console it is for</label>
             <select name="user_console_id" id="user_console_id" required>

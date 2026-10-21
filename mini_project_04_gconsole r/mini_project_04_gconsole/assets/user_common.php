@@ -92,7 +92,7 @@ function add_user_console($conn, $user_id){
 }
 
 function get_user_consoles($conn, $user_id){
-    // every console the user owns and how many games they have on it
+    // every console owned amd how many
     $sql = "SELECT user_console_id, console_name, region, purchase_date, price,
                    (SELECT COUNT(*) FROM user_game WHERE user_game.user_console_id = user_console.user_console_id) AS game_count
             FROM user_console
@@ -107,7 +107,7 @@ function get_user_consoles($conn, $user_id){
 }
 
 function remove_user_console($conn, $user_id){
-    // games on the console are removed with it
+
     $sql = "DELETE FROM user_console WHERE user_console_id = ? AND user_id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $_POST["user_console_id"]);
