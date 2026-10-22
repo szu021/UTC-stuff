@@ -1,12 +1,12 @@
 <?php
 function dbconnect_insert()
 {
-    $servername = "localhost";  //sets servername
-    $dbusername = "root";       // database username
-    $dbpassword = "";           // password for database useraccount
-    $dbname = "gconsole";       //database name to connect to
+    $servername = "localhost";
+    $dbusername = "root";
+    $dbpassword = "";
+    $dbname = "gconsole";
 
-    $conn = new PDO("mysql:host=$servername;port=3306;dbname=$dbname", $dbusername, $dbpassword);  // creates a PDO connection to the database
+    $conn = new PDO("mysql:host=$servername;port=3306;dbname=$dbname", $dbusername, $dbpassword);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //sets error modes
     return $conn;
 }
