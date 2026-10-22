@@ -6,11 +6,8 @@ function reg_developer($conn){
     // prepare sql
     $sql = "INSERT INTO developer (name, location) VALUES(?,?)";
     $stmt = $conn->prepare($sql);
-
-
     $stmt->bindParam(1, $_POST["name"]);
     $stmt->bindParam(2, $_POST["location"]);
-
     $stmt->execute(); // run the query
     $conn = null;
     return true;
@@ -20,7 +17,7 @@ function get_developers($conn){
     // function to get all the developers for a drop down
 
     $sql = "SELECT * FROM developer";
-    //get all developers in system
+    //puts them in system
     $stmt = $conn->prepare($sql);
 
     $stmt->execute();
