@@ -1,9 +1,5 @@
 <?php
-// functions for the user pages (sign up, sign in, dashboard, consoles and games)
-// every function is given the database connection from dbconn.php
 
-
-# message that shows once then is removed
 function user_message(){
     $message = "";
     if(isset($_SESSION["usermessage"])) {
@@ -13,12 +9,12 @@ function user_message(){
     return $message;
 }
 
-# makes text safe to print on the page
+
 function e($text){
     return htmlspecialchars($text);
 }
 
-# if the user is not logged in send them to sign in
+
 function check_login(){
     if (!isset($_SESSION["user_id"])) {
         header("Location: sign_in.php");
@@ -26,14 +22,14 @@ function check_login(){
     }
 }
 
-# the regions for the drop down
+
 function region_list(){
     return ["NTSC-U (North America)", "PAL (Europe / UK)", "NTSC-J (Japan)", "Other"];
 }
 
 
 
-function onlyuser($conn, $email){ // true if nobody has this email yet
+function onlyuser($conn, $email){
     $sql = "SELECT email FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $email);

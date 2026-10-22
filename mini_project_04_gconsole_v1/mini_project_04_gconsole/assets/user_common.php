@@ -1,9 +1,8 @@
 <?php
-// shared functions for the user pages (sign up, sign in, dashboard, consoles and games)
-// the connection is made in dbconn.php, every function here is given the connection to use
 
 
-# user message
+
+
 function user_message(){
     $message = "";
     if(isset($_SESSION["usermessage"])) {
@@ -27,14 +26,14 @@ function check_login(){
 
 
 # only user
-function onlyuser($conn, $email){ // at registration check to make sure there none of the same
-    $sql = "SELECT email FROM users WHERE email = ?"; // check if the inputted email is already in the emails
-    $stmt = $conn->prepare($sql); // prepare sql
+function onlyuser($conn, $email){
+    $sql = "SELECT email FROM users WHERE email = ?";
+    $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $email);
     $stmt->execute(); //run sql
-    $result = $stmt->fetch(PDO::FETCH_ASSOC); // bring results
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $conn = null;
-    if ($result) { // if user is returned
+    if ($result) {
         return false;
     } else {
         return true;
@@ -47,24 +46,24 @@ function reg_user($conn){
     $sql = "INSERT INTO users (email, password) VALUES(?,?)";
     $stmt = $conn->prepare($sql);
 
-    $hashed = password_hash($_POST["password"], PASSWORD_DEFAULT); // use a hashing algorithm to encrypt the password
+    $hashed = password_hash($_POST["password"], PASSWORD_DEFAULT); // hashes password
 
-    // list and bind all parameters for security
+
     $stmt->bindParam(1, $_POST["email"]);
     $stmt->bindParam(2, $hashed);
 
     $stmt->execute(); // run the query
-    $conn = null; // closes the connection so can't be abused
-    return true; // register successful
+    $conn = null;
+    return true;
 }
 
 # user login
 function login($conn, $email){
-    $sql = "SELECT user_id, password FROM users WHERE email = ?"; // ? stops sql injection
+    $sql = "SELECT user_id, password FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $email);
     $stmt->execute();
-    $result = $stmt->fetch(PDO::FETCH_ASSOC); // emails are unique so only one row
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $conn = null;
 
     if ($result) {

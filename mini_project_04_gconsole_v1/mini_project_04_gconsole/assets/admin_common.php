@@ -1,6 +1,5 @@
 <?php
-// shared functions for the admin pages (game, developer and publisher adders)
-// the connection is made in dbconn.php, every function here is given the connection to use
+
 
 
 function reg_developer($conn){
@@ -8,13 +7,13 @@ function reg_developer($conn){
     $sql = "INSERT INTO developer (name, location) VALUES(?,?)";
     $stmt = $conn->prepare($sql);
 
-    // list and bind all parameters for security
+
     $stmt->bindParam(1, $_POST["name"]);
     $stmt->bindParam(2, $_POST["location"]);
 
     $stmt->execute(); // run the query
-    $conn = null; // closes the connection so can't be abused
-    return true; // register successful
+    $conn = null;
+    return true;
 }
 
 function get_developers($conn){
@@ -36,13 +35,13 @@ function reg_publisher($conn){
     $sql = "INSERT INTO publisher (name, location) VALUES(?,?)";
     $stmt = $conn->prepare($sql);
 
-    // list and bind all parameters for security
+
     $stmt->bindParam(1, $_POST["name"]);
     $stmt->bindParam(2, $_POST["location"]);
 
     $stmt->execute(); // run the query
-    $conn = null; // closes the connection so can't be abused
-    return true; // register successful
+    $conn = null;
+    return true;
 }
 
 function get_publishers($conn){
@@ -59,17 +58,18 @@ function get_publishers($conn){
 }
 
 
-function reg_game($conn){
+function reg_game($conn)
+{
     // prepare sql
     $sql = "INSERT INTO game (name, developer_id, publisher_id) VALUES(?,?,?)";
     $stmt = $conn->prepare($sql);
 
-    // list and bind all parameters for security
+
     $stmt->bindParam(1, $_POST["name"]);
     $stmt->bindParam(2, $_POST["developer_id"]);
     $stmt->bindParam(3, $_POST["publisher_id"]);
 
     $stmt->execute(); // run the query
-    $conn = null; // closes the connection so can't be abused
-    return true; // register successful
+    $conn = null;
+    return true;
 }
