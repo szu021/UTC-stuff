@@ -66,7 +66,7 @@ try {
                 <td><?php echo e($c["region"]); ?></td>
                 <td>£<?php echo number_format($c["price"], 2); ?></td>
                 <!-- links to the games page filtered to this console -->
-                <td><a href="my_games.php?console=<?php echo e($c["user_console_id"]); ?>"><?php echo e($c["game_count"]); ?> game(s)</a></td>
+                <td><a href="my_games.php?console=<?php echo e($c["><?php echo e($c["game_count"]); ?> game(s)</a></td>
                 <td>
                     <form method="post" onsubmit="return confirm('Remove this console? Any games you have on it will be removed too.');">
                         <input type="hidden" name="user_console_id" value="<?php echo e($c["user_console_id"]); ?>">
