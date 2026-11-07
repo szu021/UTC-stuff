@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #323030;
+    font-family: "Open Sans", "Segoe UI", system-ui, Arial, sans-serif;
+    display: flex;
+    justify-content: center;   /* centres the card left to right */
+    align-items: flex-start;
+    padding: 5vh 20px;
+}
+
+/* the rounded card in the middle of the page */
+.register_bar {
+    width: 100%;
+    max-width: 570px;
+    min-height: 82vh;
+    background: #c8d1d9;
+    border-radius: 80px;
+    padding: 25px 50px;
+    text-align: center;
+}
+
+/* logo at the top of the card */
+.register_bar img {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    margin: 0 auto 5px;
+}
+
+.register_bar h1 {
+    margin: 10px 0 25px;
+    font-size: 42px;
+    font-weight: 700;
+    color: #545454;
+}
+
+.register_bar p {
+    margin: 0 0 15px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #545454;
+}
+
+/* the links are lists in the html so take the bullets off */
+.register_bar ul,
+.register_bar li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.register_bar li {
+    margin-bottom: 40px;
+}
+
+/* sign in and sign up links look like the outlined buttons in the design */
+.register_bar li a {
+    display: block;
+    padding: 20px 0;
+    border: 4px solid black;
+    background: #c8d1d9;
+    color: black;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.register_bar li a:hover,
+.register_bar li a:focus {
+    background: #323030;
+    color: #c8d1d9;
+}
+
+/* shared with the sign in / sign up forms so the pages match */
+.register_bar input {
+    display: block;
+    width: 100%;
+    margin: 0 0 25px;
+    padding: 20px 10px;
+    border: 4px solid black;
+    background: #c8d1d9;
+    color: black;
+    font-size: 28px;
+    text-align: center;
+}
+
+.register_bar button {
+    display: block;
+    width: 100%;
+    margin-top: 45px;
+    padding: 20px 0;
+    border: 4px solid black;
+    background: #323030;
+    color: #c8d1d9;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.register_bar button:hover {
+    background: black;
+}
