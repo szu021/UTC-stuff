@@ -50,7 +50,9 @@ $consoles = get_user_consoles(dbconnect_insert(), $_SESSION["user_id"]);
                 <td><?php echo e($c["region"]); ?></td>
                 <td>£<?php echo e($c["price"]); ?></td>
                 <!-- links to the games page showing only this console's games -->
-                <td><a href="my_games.php?console=<?php echo e($c["><?php echo e($c["game_count"]); ?> game(s)</a></td>
+                <td><a href="my_games.php?console="></a></td>
+
+                <?php echo e($c["><?php echo e($c["game_count"]"); ?> game(s)</a></td>
                 <td>
                     <form method="post">
                         <input type="hidden" name="user_console_id" value="<?php echo e($c["user_console_id"]); ?>">
