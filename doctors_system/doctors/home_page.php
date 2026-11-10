@@ -19,6 +19,7 @@ $patient = get_patient(dbconnect_insert(), $_SESSION["patient_id"]);
 <div class="register_bar">
     <h1>HOME PAGE</h1>
     <p>Welcome <?php echo e($patient["firstname"] . " " . $patient["surname"]); ?></p>
+    <a href="logout.php"> Logout </a>
 </div>
 </body>
 </html>
