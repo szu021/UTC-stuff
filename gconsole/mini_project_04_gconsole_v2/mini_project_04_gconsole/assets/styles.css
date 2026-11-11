@@ -65,7 +65,7 @@ body {
     margin-bottom: 40px;
 }
 
-/* sign in and sign up links look like the outlined buttons in the doctors */
+/* sign in and sign up links look like the outlined buttons in the doctors_v1 */
 .register_bar li a {
     display: block;
     padding: 20px 0;
@@ -164,7 +164,7 @@ body.dash_page > img {
     color: #ffffff;
     font-size: 32px;
     font-weight: 700;
-    text-transform: lowercase;   /* doctors has the menu in lower case */
+    text-transform: lowercase;   /* doctors_v1 has the menu in lower case */
     text-decoration: none;
 }
 
@@ -214,7 +214,7 @@ body.dash_page > img {
 
 /* ------------------------------------------------------------------
    add console box (and can be reused for add game)
-   the grey rounded box sits on the left of the page like the doctors
+   the grey rounded box sits on the left of the page like the doctors_v1
 ------------------------------------------------------------------- */
 
 .adder {

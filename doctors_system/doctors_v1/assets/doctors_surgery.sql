@@ -38,7 +38,7 @@ CREATE TABLE `booking` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctors`
+-- Table structure for table `doctors_v1`
 --
 
 CREATE TABLE `doctors` (
@@ -78,7 +78,7 @@ ALTER TABLE `booking`
   ADD KEY `patient_id` (`patient_id`);
 
 --
--- Indexes for table `doctors`
+-- Indexes for table `doctors_v1`
 --
 ALTER TABLE `doctors`
   ADD PRIMARY KEY (`doctor_ID`);
@@ -100,7 +100,7 @@ ALTER TABLE `booking`
   MODIFY `booking_id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `doctors`
+-- AUTO_INCREMENT for table `doctors_v1`
 --
 ALTER TABLE `doctors`
   MODIFY `doctor_ID` int NOT NULL AUTO_INCREMENT;

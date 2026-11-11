@@ -46,7 +46,7 @@ body {
     color: #ffffff;
     font-size: 32px;
     font-weight: 700;
-    text-transform: lowercase;   /* doctors has the menu in lower case */
+    text-transform: lowercase;   /* doctors_v1 has the menu in lower case */
     text-decoration: none;
 }
 
