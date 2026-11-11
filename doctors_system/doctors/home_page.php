@@ -13,13 +13,17 @@ $patient = get_patient(dbconnect_insert(), $_SESSION["patient_id"]);
 <head>
     <title>home</title>
     <link rel="stylesheet" href="assets/styles.css">
+
 </head>
 
 <body>
-<div class="register_bar">
-    <h1>HOME PAGE</h1>
-    <p>Welcome <?php echo e($patient["firstname"] . " " . $patient["surname"]); ?></p>
-    <a href="logout.php"> Logout </a>
+<div class="navi">
+    <?php require_once "navi.php"; ?>
+    <div class="register_bar">
+        <h1>HOME PAGE</h1>
+        <p>Welcome <?php echo e($patient["firstname"] . " " . $patient["surname"]); ?></p>
+
+    </div>
 </div>
 </body>
 </html>
