@@ -25,6 +25,11 @@ $patient = get_patient(dbconnect_insert(), $_SESSION["patient_id"]);
 
     </div>
 </div>
+
+
+<select>
+
+</select>
 </body>
 </html>
 

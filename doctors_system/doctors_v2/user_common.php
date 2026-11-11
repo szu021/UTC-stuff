@@ -45,7 +45,7 @@ function reg_user($conn)
     $stmt->bindParam(2, $_POST["surname"]);
     $stmt->bindParam(3, $_POST["email_address"]);
     $stmt->bindParam(4, $hashed);
-    $stmt->bindParam(5, $_POST["home address"]);
+    $stmt->bindParam(5, $_POST["home_address"]);
     $stmt->bindParam(6, $_POST["DOB"]);
     $stmt->execute();
 
