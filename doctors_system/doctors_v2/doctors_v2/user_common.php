@@ -75,3 +75,14 @@ function get_patient($conn, $id)
     $conn = null;
     return $result;
 }
+
+function remove_booking($conn){
+//    removes console from list
+    $sql = "DELETE FROM booking WHERE booking_id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(1, $_POST["booking_id"]);
+    $stmt->execute();
+    $conn = null;
+    return true;
+}
+

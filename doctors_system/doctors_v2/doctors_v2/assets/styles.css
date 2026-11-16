@@ -145,3 +145,10 @@ body {
 table { width: 100%; border-collapse: collapse; margin-top: 10px; }
 th, td { padding: 6px 8px; text-align: left; border-bottom: 1px solid #ccc; }
 textarea { width: 100%; box-sizing: border-box; }
+
+
+.register_bar button[type=submit] {
+    padding: 4px 10px;
+    cursor: pointer;
+    font-size: 15px
+}
