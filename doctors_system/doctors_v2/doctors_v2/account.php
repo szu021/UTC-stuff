@@ -24,3 +24,5 @@ $message = user_message();
     <div class="register_bar">
         <h1>Your Account</h1>
         <p>Welcome <?php echo e($patient["firstname"] . " " . $patient["surname"]); ?></p>
+        <p>change email</p>
+        <p>change password</p>
