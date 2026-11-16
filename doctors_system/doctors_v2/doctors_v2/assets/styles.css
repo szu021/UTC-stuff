@@ -141,3 +141,7 @@ body {
 .register_bar button:hover {
     background: black;
 }
+/* bookings table and details box */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { padding: 6px 8px; text-align: left; border-bottom: 1px solid #ccc; }
+textarea { width: 100%; box-sizing: border-box; }

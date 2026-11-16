@@ -32,13 +32,13 @@ CREATE TABLE `booking` (
   `doctor_id` int NOT NULL,
   `patient_id` int NOT NULL,
   `appointment_booking` datetime NOT NULL,
-  `ppointment_details` text NOT NULL
+  `appointment_details` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctors_v1`
+-- Table structure for table `doctors`
 --
 
 CREATE TABLE `doctors` (
@@ -78,7 +78,7 @@ ALTER TABLE `booking`
   ADD KEY `patient_id` (`patient_id`);
 
 --
--- Indexes for table `doctors_v1`
+-- Indexes for table `doctors`
 --
 ALTER TABLE `doctors`
   ADD PRIMARY KEY (`doctor_ID`);
@@ -100,7 +100,7 @@ ALTER TABLE `booking`
   MODIFY `booking_id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `doctors_v1`
+-- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
   MODIFY `doctor_ID` int NOT NULL AUTO_INCREMENT;
