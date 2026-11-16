@@ -150,5 +150,7 @@ textarea { width: 100%; box-sizing: border-box; }
 .register_bar button[type=submit] {
     padding: 4px 10px;
     cursor: pointer;
-    font-size: 15px
+    font-size: 15px;
+    margin-bottom: 15px;
+
 }
