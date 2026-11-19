@@ -66,9 +66,9 @@ function login($conn, $email)
     return $result;
 }
 
-function get_patient($conn, $id)
+function get_user($conn, $id)
 {
-    $sql = "SELECT firstname, surname FROM users WHERE User_ID = ?";
+    $sql = "SELECT firstname, surname FROM users WHERE user_id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $id);
     $stmt->execute();
