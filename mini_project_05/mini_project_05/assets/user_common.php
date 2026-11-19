@@ -25,7 +25,7 @@ function check_login()
 
 function onlyuser($conn, $email)
 {
-    $sql = "SELECT email_address FROM users WHERE email_address = ?";
+    $sql = "SELECT email FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $email);
     $stmt->execute();
@@ -57,7 +57,7 @@ function reg_user($conn)
 
 function login($conn, $email)
 {
-    $sql = "SELECT user_id, password FROM users WHERE email_address = ?";
+    $sql = "SELECT User_ID AS user_id, password FROM users WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $email);
     $stmt->execute();
@@ -68,7 +68,7 @@ function login($conn, $email)
 
 function get_patient($conn, $id)
 {
-    $sql = "SELECT firstname, surname FROM users WHERE user_id = ?";
+    $sql = "SELECT firstname, surname FROM users WHERE User_ID = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(1, $id);
     $stmt->execute();
