@@ -1,7 +1,7 @@
 <?php
 function dbconnect_insert()
 {
-    $servername = "localhost";
+    $servername = "127.0.0.1";
     $dbusername = "root";
     $dbpassword = "";
     $dbname = "doctors_surgery";

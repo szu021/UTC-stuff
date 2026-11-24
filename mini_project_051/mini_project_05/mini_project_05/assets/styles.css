@@ -1,0 +1,535 @@
+/* Diddly Squat Farm Shop front end styles
+   colours and sizes taken from the canva design (mini_project_farmshop.pdf)
+   dark grey page  #545454
+   light grey card #c8d1d9
+   green header    #2e6417
+   text            #545454
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* the menu font in the design is DIN Next Condensed, the others are close matches that most computers have */
+:root {
+    --menu_font: "DIN Next LT Pro Condensed", "DIN Condensed", "Bahnschrift Condensed", "Oswald", "Arial Narrow", sans-serif;
+}
+
+/* ------------------------------------------------------------------
+   index, login and register pages
+   dark page with the logo above a rounded card
+------------------------------------------------------------------- */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #545454;
+    font-family: "Open Sans", "Segoe UI", system-ui, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centres the logo and card left to right */
+    justify-content: flex-start;
+    padding: 25px 20px 50px;
+}
+
+/* logo above the card */
+.site_logo {
+    display: block;
+    width: 580px;
+    max-width: 100%;
+    margin: 0 auto 30px;
+}
+
+/* the rounded card in the middle of the page */
+.register_bar {
+    width: 100%;
+    max-width: 500px;
+    min-height: 620px;
+    background: #c8d1d9;
+    border-radius: 70px;
+    padding: 40px 45px 40px;
+    text-align: center;
+}
+
+.register_bar h1 {
+    margin: 10px 0 25px;
+    font-size: 42px;
+    font-weight: 700;
+    color: #545454;
+}
+
+/* "Welcome" on the index page is smaller and black in the design */
+.register_bar h1.index_title {
+    font-size: 30px;
+    color: #000000;
+}
+
+.register_bar p {
+    margin: 0 0 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #545454;
+}
+
+/* the links are lists in the html so take the bullets off */
+.register_bar ul,
+.register_bar li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.register_bar li {
+    margin-bottom: 40px;
+}
+
+/* sign in and sign up links are the outlined buttons */
+.register_bar li a {
+    display: block;
+    padding: 18px 0;
+    border: 4px solid black;
+    background: #c8d1d9;
+    color: black;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.register_bar li a:hover,
+.register_bar li a:focus {
+    background: #323030;
+    color: #c8d1d9;
+}
+
+/* login and register boxes */
+.register_bar input {
+    display: block;
+    width: 100%;
+    margin: 0 0 18px;
+    padding: 16px 10px;
+    border: 4px solid black;
+    background: #c8d1d9;
+    color: black;
+    font-size: 24px;
+    font-family: inherit;
+    text-align: center;
+}
+
+.register_bar input::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+/* the login and sign up buttons are the dark ones */
+.register_bar input[type="submit"] {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    background: #323030;
+    color: #c8d1d9;
+    cursor: pointer;
+}
+
+.register_bar input[type="submit"]:hover {
+    background: black;
+}
+
+.register_bar a {
+    color: #545454;
+}
+
+.message {
+    margin: 0 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #545454;
+}
+
+
+/* ------------------------------------------------------------------
+   logged in pages (about, shop, basket, your orders etc)
+   add class="dash_page" to the <body> of these pages so the dark
+   centred layout used by the index page does not apply to them
+------------------------------------------------------------------- */
+
+body.dash_page {
+    display: block;          /* turns off the centring used on the index page */
+    padding: 0;
+    background: #ffffff;
+}
+
+/* green header across the top */
+.navi {
+    width: 100%;
+}
+
+.navi nav {
+    background: #2e6417;
+    padding: 10px 1vw 45px;
+}
+
+.navi nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navi nav li {
+    margin: 0;
+}
+
+.navi nav a {
+    color: #000000;
+    font-family: var(--menu_font);
+    font-size: 36px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.navi nav a:hover,
+.navi nav a:focus {
+    color: #c8d1d9;
+    text-decoration: underline;
+}
+
+/* account / basket / your orders in the top left */
+.navi nav ul.top_links {
+    gap: 0 55px;
+    padding: 5px 25px;
+}
+
+/* logo on the left and the main menu next to it */
+.main_row {
+    display: flex;
+    flex-wrap: wrap;           /* menu drops under the logo on small screens */
+    align-items: center;
+    gap: 20px 30px;
+    margin-top: 15px;
+}
+
+.main_row img {
+    display: block;
+    width: 40vw;
+    min-width: 300px;
+    max-width: 580px;
+    margin-left: 1vw;
+}
+
+.main_links {
+    flex: 1;
+    min-width: 300px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px 30px;
+}
+
+.navi nav .main_links a {
+    font-size: 40px;
+}
+
+
+/* ------------------------------------------------------------------
+   about page (contact and visit us use the same layout)
+------------------------------------------------------------------- */
+
+.about {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 60px;
+}
+
+.about h1 {
+    margin: 10px 0 15px 25px;
+    color: #000000;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+/* grey box where the picture will go */
+.about_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 245px;
+    background: #c8d1d9;
+    border-radius: 40px;
+    color: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.about h2 {
+    margin: 70px 0 0;
+    color: #000000;
+    font-size: clamp(36px, 6vw, 90px);
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------------------
+   shop page  -  4 products across, 2 on tablets, 1 on phones
+------------------------------------------------------------------- */
+
+.product_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    width: 100%;
+    max-width: 1350px;
+    margin: 30px auto 60px;
+    padding: 0 30px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px 30px;
+    background: #c8d1d9;
+    border-radius: 45px;
+    text-align: center;
+    color: #000000;
+}
+
+.product_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 25px;
+    background: #b3bec8;
+    font-size: 18px;
+}
+
+.product h2 {
+    margin: 0 0 8px;
+    font-size: 22px;
+}
+
+.product_description {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
+
+.product_price {
+    margin: 0 0 15px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.product form {
+    width: 100%;
+    margin-top: auto;          /* keeps the buttons level along the bottom of each row */
+}
+
+.product input[type="number"] {
+    width: 80px;
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 3px solid black;
+    background: #c8d1d9;
+    color: black;
+    font-size: 18px;
+    font-family: inherit;
+    text-align: center;
+}
+
+.product button {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border: 3px solid black;
+    background: #c8d1d9;
+    color: black;
+    font-size: 18px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.product button:hover,
+.product button:focus {
+    background: #323030;
+    color: #c8d1d9;
+}
+
+.sold_out {
+    margin: auto 0 0;
+    font-weight: 700;
+}
+
+/* messages above the pages that have no card */
+.page_message {
+    max-width: 1350px;
+    margin: 25px auto 0;
+    padding: 0 30px;
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------------------
+   basket, your orders and account  -  one grey card in the middle
+------------------------------------------------------------------- */
+
+.list_box {
+    width: 100%;
+    max-width: 440px;
+    min-height: 520px;
+    margin: 30px auto 60px;
+    padding: 20px 35px 35px;
+    background: #c8d1d9;
+    border-radius: 55px;
+    color: #000000;
+}
+
+/* keeps the card away from the edges of small screens */
+.dash_page main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* orders has three columns so the card is wider */
+.list_box.wide {
+    max-width: 700px;
+}
+
+.list_box h1 {
+    margin: 0 0 30px;
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.list_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 14px;
+    font-size: 18px;
+}
+
+.list_row form {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+/* the item name takes the free space so the price and remove button stay on the right */
+.list_row > span:first-child {
+    flex: 1 1 auto;
+}
+
+input[type="hidden"] {
+    display: none;
+}
+
+.list_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+.list_table th,
+.list_table td {
+    padding: 10px 6px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.list_table th {
+    border-bottom: 2px solid #545454;
+}
+
+.list_table .price {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.list_table .subtotal td {
+    border-top: 2px solid #545454;
+    font-weight: 700;
+}
+
+.list_table form {
+    margin: 0;
+}
+
+.remove_btn {
+    width: auto;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* checkout sits under the items near the bottom of the card */
+.checkout_form {
+    margin: 0;
+    padding-top: 60px;
+}
+
+.checkout_btn,
+.box_btn {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border: none;
+    background: #545454;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.box_btn {
+    margin-top: 15px;
+}
+
+.checkout_btn:hover,
+.checkout_btn:focus,
+.box_btn:hover,
+.box_btn:focus {
+    background: #000000;
+}
+
+
+/* ------------------------------------------------------------------
+   smaller screens
+------------------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .product_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product_grid {
+        grid-template-columns: 1fr;
+    }
+    .register_bar {
+        padding: 30px 25px;
+        border-radius: 50px;
+    }
+    .navi nav a {
+        font-size: 28px;
+    }
+    .navi nav .main_links a {
+        font-size: 30px;
+    }
+    .navi nav ul.top_links {
+        gap: 0 25px;
+    }
+    .list_box {
+        padding: 20px 20px 30px;
+    }
+    .list_row,
+    .list_table {
+        font-size: 16px;
+    }
+}
